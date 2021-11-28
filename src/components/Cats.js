@@ -1,16 +1,36 @@
 import React, { Component } from 'react';
 import cats from '../cats-data'
+import CatCard from './CatCard'
 
 class Cats extends React.Component {
 
-    render() {
-      return ( 
-      <div>
+    constructor() {
+        super()
+        this.state = {
+            cats: []
+        }
+    }
 
-      </div> 
-       )
+    //mocking fetch req
+    componentDidMount() {
+        //fetch 
+        //then => json 
+        //then => setstate 
+        this.setState({
+            cats: cats
+        })
+    }
+
+
+    render() {
+        const catCards = this.state.map(<CatCard cat={cat}/>)
+        return (
+            <div>
+                { catCards }
+            </div>
+        )
     }
 
 }
 
-export default Cats; 
+export default Cats;
