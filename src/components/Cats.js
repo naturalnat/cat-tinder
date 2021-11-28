@@ -23,7 +23,7 @@ class Cats extends React.Component {
 
 
     render() {
-        const catCards = this.state.map(<CatCard cat={cat}/>)
+        const catCards = this.state.cats.map(cat => <CatCard key={cat.name} cat={cat}/>)
         return (
             <div>
                 { catCards }
