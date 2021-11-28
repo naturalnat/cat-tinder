@@ -1,9 +1,14 @@
-import React from 'react';
+import React, { Component } from 'react';
+import cats from '../cats-data'
 
 class Cats extends React.Component {
 
     render() {
-        return "meow"
+      return ( 
+      <div>
+
+      </div> 
+       )
     }
 
 }
