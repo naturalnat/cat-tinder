@@ -3,7 +3,7 @@ import React from "react";
 const CatCard = ({ cat }) => {
     return (
         <div>
-           <img src={cat.url}/>
+           <img height="100px" width="100px" src={cat.url} alt={cat.name}/>
            <p>{cat.name}</p>
         </div>
     )
