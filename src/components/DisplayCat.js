@@ -1,10 +1,10 @@
 import React from 'react'
 import CatCard from './CatCard'
 
-function DisplayCat() {
+function DisplayCat({ cat }) {
     return (
     <div>
-         <CatCard />
+         <CatCard cat={cat}/>
          <button>Like</button>
          <button>Dislike</button>
     </div>
