@@ -23,9 +23,14 @@ class App extends React.Component {
     return (
       <div className="App">
         <h1>Cat Tinder</h1>
-        <DisplayCat cat={this.state.cats[0]} />
-        <Cats cats={this.state.cats}/>
+        { this.state.cats.length == 0 
+        ? "LOADING..." : 
+        <div> 
+          <DisplayCat cat={this.state.cats[0]}/>
+          <Cats cats={this.state.cats}/>
       </div>
+    }
+    </div>
     );
   }
 }
